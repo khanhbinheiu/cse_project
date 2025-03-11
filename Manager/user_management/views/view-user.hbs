@@ -1,0 +1,48 @@
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="/">Trang chủ</a></li>
+    <li class="breadcrumb-item active" aria-current="page">Xem thông tin</li>
+  </ol>
+</nav>
+
+<div class="view-user p-5">
+  {{#each rows}}
+  <div class="row mb-5">
+    <div class="col text-center">
+      <h3>{{this.first_name}} {{this.last_name}}</h3>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Họ</th>
+            <th scope="col">Tên</th>
+            <th scope="col">Email</th>
+            <th scope="col">phone</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">{{this.first_name}}</th>
+            <td>{{this.last_name}}</td>
+            <td>{{this.email}}</td>
+            <td>{{this.phone}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="row">
+      <div class="col">
+        <b>Ghi chú</b>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        {{this.comments}}
+      </div>
+    </div>
+  </div>
+  {{/each}}
+</div>
